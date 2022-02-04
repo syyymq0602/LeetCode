@@ -9,6 +9,7 @@ public class DP5 {
     /**
      * 5. 最长回文子串
      * 给你一个字符串 s，找到 s 中最长的回文子串。
+     * 状态方程： dp[i][j] = dp[i+1][j-1]^(Si == Sj)
      * @param s
      * @return
      */

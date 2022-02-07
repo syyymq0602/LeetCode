@@ -14,8 +14,8 @@ package DP.scripts;
 public class DP62 {
     public static void main(String[] args) {
         var m = 3;
-        var n = 2;
-        System.out.println(uniquePaths(m,n));
+        var n = 7;
+        System.out.println(uniquePaths1(m,n));
     }
 
     private static int uniquePaths(int m, int n) {
@@ -32,5 +32,19 @@ public class DP62 {
             }
         }
         return dp[m-1][n-1];
+    }
+
+    // 滚动数组
+    private static int uniquePaths1(int m,int n){
+        int[] dp = new int[n];
+        dp[0] = 1;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if(j-1>=0){
+                    dp[j] += dp[j-1];
+                }
+            }
+        }
+        return dp[n-1];
     }
 }

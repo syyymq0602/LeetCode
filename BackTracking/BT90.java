@@ -23,32 +23,34 @@ public class BT90 {
             }
             System.out.println(out);
         }
+        System.out.println(lists.size());
     }
 
     private static List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
-        Set<Integer> hash = new HashSet<>();
+        boolean[] loc = new boolean[nums.length];
         Arrays.sort(nums);
-        dfs(ans,temp,nums,hash,0);
+        dfs(ans,temp,nums,loc,0);
+        ans.add(new ArrayList<>());
         return ans;
     }
 
-    private static void dfs(List<List<Integer>> ans, List<Integer> temp, int[] nums, Set<Integer> hash, int pos) {
+    private static void dfs(List<List<Integer>> ans, List<Integer> temp, int[] nums, boolean[] loc, int pos) {
         if(pos == nums.length){
-            ans.add(new ArrayList<>(temp));
             return;
         }
 
         for (int i = pos; i < nums.length; i++) {
-            if(hash.contains(nums[i])){
+            if(i>0 && nums[i] == nums[i-1] && !loc[i-1]){
                 continue;
             }
             temp.add(nums[i]);
-            hash.add(nums[i]);
-            dfs(ans,temp,nums,hash,i+1);
+            ans.add(new ArrayList<>(temp));
+            loc[i] = true;
+            dfs(ans,temp,nums,loc,i+1);
             temp.remove(temp.size()-1);
-            hash.remove(nums[i]);
+            loc[i] = false;
         }
     }
 }

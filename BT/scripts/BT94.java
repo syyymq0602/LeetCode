@@ -3,6 +3,7 @@ package BT.scripts;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * 94. 二叉树的中序遍历
@@ -22,7 +23,7 @@ public class BT94 {
 
     private static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
-        inorder(root,res);
+        res = inorder(root);
         return res;
     }
 
@@ -32,6 +33,27 @@ public class BT94 {
             list.add(node.val);
             inorder(node.right,list);
         }
+    }
+
+    private static List<Integer> inorder(TreeNode node){
+        List<Integer> ans = new ArrayList<>();
+        if(node == null){
+            return ans;
+        }
+        Stack<TreeNode> temp = new Stack<>();
+        TreeNode cur = node;
+        while (cur!=null || !temp.isEmpty()){
+            while (cur!=null){
+                temp.push(cur);
+                cur = cur.left;
+            }
+            if(!temp.isEmpty()){
+                cur = temp.pop();
+                ans.add(cur.val);
+                cur = cur.right;
+            }
+        }
+        return ans;
     }
 
     private static TreeNode generateTreeNode(TreeNode node,int index){

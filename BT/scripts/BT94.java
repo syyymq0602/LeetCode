@@ -16,9 +16,15 @@ import java.util.Stack;
 public class BT94 {
     public final static List<Integer> list = Arrays.asList(1,null,2,3);
     public static void main(String[] args) {
-        var root = new TreeNode();
-        var node = generateTreeNode(root,0);
-        System.out.println(inorderTraversal(node));
+        var nodes = new TreeNode(1);
+        nodes.left = new TreeNode(2);
+        nodes.left.left = new TreeNode(6);
+        nodes.left.right = new TreeNode(7);
+        nodes.left.left.left = new TreeNode(100);
+        nodes.right = new TreeNode(4);
+        nodes.right.left = new TreeNode(3);
+        nodes.right.right = new TreeNode(5);
+        System.out.println(inorderTraversal(nodes));
     }
 
     private static List<Integer> inorderTraversal(TreeNode root) {

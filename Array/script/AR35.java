@@ -14,9 +14,9 @@ package Array.script;
  */
 public class AR35 {
     public static void main(String[] args) {
-        var nums = new int[]{1,3,5,6};
-        var target = 5;
-        System.out.println(searchInsert(nums,target));
+        var nums = new int[]{1,4,6,7,8};
+        var target = 6;
+        System.out.println(searchInsert2(nums,target));
     }
     private static int searchInsert(int[] nums, int target) {
         int n = nums.length;
@@ -28,5 +28,19 @@ public class AR35 {
             index++;
         }
         return index;
+    }
+
+    private static int searchInsert2(int[] nums, int target) {
+        int n = nums.length;
+        int left = 0, right = n - 1;
+        while (left <= right) {
+            int mid = ((right - left) >> 1) + left;
+            if (target <= nums[mid]) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return left;
     }
 }

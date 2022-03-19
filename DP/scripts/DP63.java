@@ -19,9 +19,12 @@ package DP.scripts;
 public class DP63 {
     public static void main(String[] args) {
         var obstacleGrid = new int[][]{
-                new int[]{0,0,1},
-                new int[]{0,1,0},
-                new int[]{0,0,0}
+                new int[]{0,0,0,0,0,0,0,0},
+                new int[]{0,0,0,0,0,0,0,0},
+                new int[]{0,0,0,0,1,0,0,0},
+                new int[]{0,0,0,0,0,0,0,0},
+                new int[]{0,0,0,0,0,0,0,0},
+                new int[]{0,0,0,0,0,0,0,0}
         };
         System.out.println(uniquePathsWithObstacles1(obstacleGrid));
     }

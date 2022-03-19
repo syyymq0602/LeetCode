@@ -20,7 +20,7 @@ package Array.script;
  */
 public class AR31 {
     public static void main(String[] args) {
-        var nums = new int[]{5,1,1};
+        var nums = new int[]{1,2,3,8,6,7,5,4};
         nextPermutation(nums);
         var res = "";
         for (int i = 0; i < nums.length; i++) {

@@ -14,7 +14,7 @@ public class BT47 {
 
     private static boolean[] vis;
     public static void main(String[] args) {
-        var nums = new int[]{1,1,4,5};
+        var nums = new int[]{1,2,2};
         List<List<Integer>> unique = permuteUnique(nums);
         for (var list:unique) {
             var out = "";

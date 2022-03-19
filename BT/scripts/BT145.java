@@ -14,14 +14,15 @@ import java.util.Stack;
  */
 public class BT145 {
     public static void main(String[] args) {
-        var nodes = new TreeNode(1);
-        nodes.left = new TreeNode(2);
-        nodes.left.left = new TreeNode(6);
-        nodes.left.right = new TreeNode(7);
-        nodes.left.left.left = new TreeNode(100);
-        nodes.right = new TreeNode(4);
-        nodes.right.left = new TreeNode(3);
-        nodes.right.right = new TreeNode(5);
+        var nodes = new TreeNode(4);
+        nodes.left = new TreeNode(3);
+        nodes.left.left = new TreeNode(2);
+        nodes.left.right = new TreeNode(2);
+        nodes.left.right.left = new TreeNode(1);
+        nodes.right = new TreeNode(3);
+        nodes.right.left = new TreeNode(2);
+        nodes.right.right = new TreeNode(2);
+        nodes.right.left.left = new TreeNode(0);
         System.out.println(postorderTraversal(nodes));
     }
 

@@ -3,7 +3,8 @@ package LL.scripts;
 import java.util.HashSet;
 import java.util.Set;
 
-import static LL.scripts.LL2.generateByArray;
+import static LL.scripts.ListNodeUtils.generateByArray;
+
 
 /**
  * 141. 环形链表

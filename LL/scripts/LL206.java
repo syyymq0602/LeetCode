@@ -3,7 +3,8 @@ package LL.scripts;
 import java.util.ArrayList;
 import java.util.List;
 
-import static LL.scripts.LL2.generateByArray;
+import static LL.scripts.ListNodeUtils.generateByArray;
+
 
 /**
  * 206. 反转链表

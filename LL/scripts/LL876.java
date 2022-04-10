@@ -1,6 +1,7 @@
 package LL.scripts;
 
-import static LL.scripts.LL2.generateByArray;
+
+import static LL.scripts.ListNodeUtils.generateByArray;
 
 /**
  * 876. 链表的中间结点

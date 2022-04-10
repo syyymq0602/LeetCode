@@ -1,6 +1,7 @@
 package LL.scripts;
 
-import static LL.scripts.LL2.generateByArray;
+
+import static LL.scripts.ListNodeUtils.generateByArray;
 
 /**
  * 83. 删除排序链表中的重复元素

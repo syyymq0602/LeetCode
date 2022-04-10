@@ -2,9 +2,9 @@ package LL.scripts;
 
 public class ListNode {
     public int val;
-    ListNode next;
+    public ListNode next;
     ListNode(){}
-    ListNode(int val){
+    public ListNode(int val){
         this.val = val;
     }
     ListNode(int val,ListNode next){

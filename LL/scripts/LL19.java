@@ -3,7 +3,7 @@ package LL.scripts;
 import java.util.Deque;
 import java.util.LinkedList;
 
-import static LL.scripts.LL2.generateByArray;
+import static LL.scripts.ListNodeUtils.generateByArray;
 
 /**
  * 19. 删除链表的倒数第 N 个结点

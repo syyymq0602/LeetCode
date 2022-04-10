@@ -45,6 +45,7 @@ class MyQueue {
 
     public MyQueue() {
         stack1 = new Stack<>();
+        stack2 = new Stack<>();
     }
 
     public void push(int x) {
@@ -52,17 +53,15 @@ class MyQueue {
     }
 
     public int pop() {
-        int total = stack1.size();
-        int ans;
-        stack2 = new Stack<>();
-        for (int i = 0; i < total-1; i++) {
-            stack2.push(stack1.pop());
+        if (stack2.isEmpty()) {
+            if (stack1.isEmpty()) {
+                return -1;
+            }
+            while (!stack1.isEmpty()) {
+                stack2.push(stack1.pop());
+            }
         }
-        ans = stack1.pop();
-        while (!stack2.isEmpty()){
-            stack1.push(stack2.pop());
-        }
-        return ans;
+        return stack2.pop();
     }
 
     public int peek() {

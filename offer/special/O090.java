@@ -23,8 +23,6 @@ public class O090 {
         if(n == 2){
             return Math.max(nums[0],nums[1]);
         }
-        var s1 = getRange(nums,0,n-1);
-        var s2 = getRange(nums,1,n);
         return Math.max(getRange(nums,0,n-1),getRange(nums,1,n));
     }
 

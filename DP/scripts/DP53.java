@@ -6,8 +6,8 @@ package DP.scripts;
  *
  * 子数组:是数组中的一个连续部分。
  *
- * 1 <= nums.length <= 105
- * -104 <= nums[i] <= 104
+ * 1 <= nums.length <= 10e5
+ * -10e4 <= nums[i] <= 10e4
  *
  * dp[i] = max{dp[i-1]+nums[i],nums[i]}
  */

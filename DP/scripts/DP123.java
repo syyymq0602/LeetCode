@@ -7,8 +7,8 @@ package DP.scripts;
  * 设计一个算法来计算你所能获取的最大利润。你最多可以完成两笔交易。
  * 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）
  *
- * 1 <= prices.length <= 105
- * 0 <= prices[i] <= 105
+ * 1 <= prices.length <= 10e5
+ * 0 <= prices[i] <= 10e5
  */
 public class DP123 {
     public static void main(String[] args) {

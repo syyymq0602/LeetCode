@@ -34,4 +34,19 @@ public class TreeNodeUtils {
         }
         return root;
     }
+
+    public static String ListNodeToString(TreeNode root){
+        var builder = new StringBuilder();
+        dfs(root,builder);
+        return builder.toString().trim();
+    }
+
+    private static void dfs(TreeNode root, StringBuilder builder) {
+        if(root == null){
+            return;
+        }
+        builder.append(root.val).append(" ");
+        dfs(root.left,builder);
+        dfs(root.right,builder);
+    }
 }

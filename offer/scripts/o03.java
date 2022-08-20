@@ -18,6 +18,7 @@ import java.util.Set;
 public class o03 {
     public static void main(String[] args) {
         System.out.println(findRepeatNumber1(new int[]{2, 3, 1, 0, 2, 5, 3}));
+        System.out.println(Integer.parseInt(new StringBuilder("053").toString()));
     }
 
     private static int findRepeatNumber(int[] nums) {

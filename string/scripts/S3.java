@@ -1,8 +1,7 @@
 package string.scripts;
 
+import java.lang.ref.WeakReference;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * 3. 无重复字符的最长子串
@@ -16,6 +15,12 @@ public class S3 {
     public static void main(String[] args) {
         var s = "abacvbabcaa";
         System.out.println(lengthOfLongestSubstring(s));
+
+        WeakReference<String> str = new WeakReference<String>(new String("abc"));
+        System.out.println(str.get());
+        //通知JVM进行内存回收
+        System.gc();
+        System.out.println(str.get());
     }
 
     private static int lengthOfLongestSubstring(String s) {

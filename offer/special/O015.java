@@ -16,7 +16,7 @@ import java.util.List;
 public class O015 {
     public static void main(String[] args) {
         var res = findAnagrams("abab","ab");
-        System.out.println(res.toString());
+        System.out.println(res);
     }
 
     private static List<Integer> findAnagrams(String s, String p) {

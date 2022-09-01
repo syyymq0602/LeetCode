@@ -13,6 +13,7 @@ import java.util.LinkedList;
  * 0 0 0 0 2 0 4 6 8 10
  * 0 1 2 3 4 5 6 7 8 9
  *
+ * dp[i] 表示以下标 i 字符结尾的最长有效括号的长度
  * dp[i] = dp[i-2]+2 or (dp[i-1]+dp[i-dp[i-1]-2]+2)
  */
 public class DP32 {

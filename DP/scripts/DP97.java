@@ -17,7 +17,7 @@ package DP.scripts;
  */
 public class DP97 {
     public static void main(String[] args) {
-        System.out.println(isInterleave("a","dbbca","dbbcaa"));
+        System.out.println(isInterleave("a","dbbcabb","dbbcaabb"));
     }
 
     private static boolean isInterleave(String s1, String s2, String s3) {

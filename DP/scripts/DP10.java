@@ -16,7 +16,10 @@ import java.util.Objects;
  * p只含小写英文字母，以及字符.和*。
  * 保证每次出现字符 * 时，前面都匹配到有效的字符
  *
+ * dp[i][j]表示s的前i个字符与p中的前j个字符是否能够匹配
  * 状态方程: dp[i][j] = dp[i-1][j-1] ^ (s[i] == p[j])
+ *         dp[i][j] = dp[i−1][j] || dp[i][j−2], s[i] = p[j-1]
+ *         dp[i][j] = dp[i][j−2], s[i] != p[j-1]
  */
 public class DP10 {
     public static void main(String[] args) {

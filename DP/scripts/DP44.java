@@ -10,6 +10,11 @@ package DP.scripts;
  *
  * s 可能为空，且只包含从 a-z 的小写字母。
  * p 可能为空，且只包含从 a-z 的小写字母，以及字符 ? 和 *。
+ *
+ * dp[i][j] 表示字符串 s 的前 i 个字符和模式 p 的前 j 个字符是否能匹配
+ * dp[i][j] = dp[i−1][j−1], si 与 pj相同或者pj是问号
+ * dp[i][j] = dp[i][j−1] || dp[i−1][j], pj是 * 号
+ * dp[i][j] = false, 其他情况
  */
 public class DP44 {
     public static void main(String[] args) {

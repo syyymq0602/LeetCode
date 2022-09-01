@@ -1,7 +1,9 @@
 package BT.scripts;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class TreeNodeUtils {
     public static TreeNode generateByList(List<Integer> numsList) {
@@ -36,17 +38,29 @@ public class TreeNodeUtils {
     }
 
     public static String ListNodeToString(TreeNode root){
-        var builder = new StringBuilder();
-        dfs(root,builder);
-        return builder.toString().trim();
-    }
-
-    private static void dfs(TreeNode root, StringBuilder builder) {
-        if(root == null){
-            return;
+        List<Integer> list = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                var n = queue.poll();
+                list.add(n.val);
+                if(n.left != null){
+                    queue.offer(n.left);
+                }
+                if(n.right != null){
+                    queue.offer(n.right);
+                }
+            }
         }
-        builder.append(root.val).append(" ");
-        dfs(root.left,builder);
-        dfs(root.right,builder);
+        for (int i = list.size() - 1; i >=0 ; i--) {
+            if(list.get(i) == null){
+                list.remove(i);
+            }else {
+                break;
+            }
+        }
+        return list.toString();
     }
 }

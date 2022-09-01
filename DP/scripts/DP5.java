@@ -1,5 +1,13 @@
 package DP.scripts;
 
+/**
+ * 5. 最长回文子串
+ *
+ * 给你一个字符串 s，找到 s 中最长的回文子串。
+ *
+ * dp[i][j]表示s 从i到j是不是回文数
+ * dp[i][j] = dp[i+1][j-1]^(Si == Sj)
+ */
 public class DP5 {
     public static void main(String[] args) {
         String input = "babad";

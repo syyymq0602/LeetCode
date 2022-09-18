@@ -16,13 +16,13 @@ public class Sorts {
 //        BuddleSort(num1);
 //        SelectSort(num2);
 //        insertSort(num3);
-//        mergeSort(num4, 0, num4.length - 1);
-//        System.out.println(Arrays.toString(num4));
+        mergeSort(num4, 0, num4.length - 1);
+        System.out.println(Arrays.toString(num4));
 //        quickSort(num5,0,num5.length-1);
 //        System.out.println(Arrays.toString(num5));
 //        shellSort(num6);
 //        heapSort(num7);
-        bucketSort(num8);
+//        bucketSort(num8);
     }
 
     /**

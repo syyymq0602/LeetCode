@@ -18,8 +18,8 @@ import java.util.LinkedList;
  */
 public class DP32 {
     public static void main(String[] args) {
-        var s = "(()())";
-        System.out.println(longestValidParentheses(s));
+        var s = ")(())";
+        System.out.println(longestValidParentheses2(s));
     }
 
     public static int longestValidParentheses(String s) {
